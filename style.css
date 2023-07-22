@@ -1,0 +1,162 @@
+*{
+  margin: 0px;
+}
+/* STYLE SECTIONING TAGS */
+body {
+  background-color: rgb(255, 255, 255); 
+  text-align: left;
+  font-family: 'Lexend', sans-serif;
+  color: rgb(0, 31, 41);
+}
+
+header {
+  background-color: rgb(0, 31, 41);
+  color: rgb(255, 255, 255);
+  padding: 2.5em;
+}
+
+/* STYLE TEXT */
+
+h1 {
+  text-align: center;
+  font-size: 300%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+h2 {
+  
+  font-size: 150%
+  margin: larger;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+p {
+  text-align: left;
+  line-height: 150%;
+  padding-top: 0em;
+  padding-bottom: 1em;
+  padding-right: 5%;
+  padding-left: 5%;
+  margin-bottom: 1.5em;
+}
+
+/* STYLE IMAGES */
+
+img {
+  max-width: 50%;
+  max-height: 50%;
+  margin-top: 1em;
+  margin-bottom: 3em;
+  margin-right: 5%;
+  /*margin-left: 5%;*/
+  border-radius: 15%;
+  border: 5px solid rgb(0, 31, 41);
+  flex-basis: 10%;
+}
+
+iframe {
+  max-width: 50%;
+  max-height: 50%;
+  margin-top: 1em;
+  margin-bottom: 3em;
+  margin-right: 5%;
+  /*margin-left: 5%;*/
+}
+
+/* STYLE NAV BAR */
+  nav {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+    background-color: rgb(0, 31, 41);
+  }
+
+  #circle {
+    border-radius: 50%;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-wrapper {
+    position: relative;
+  }
+
+  .center {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  }
+
+  span {
+    position: relative;
+    display: inline-block;
+    letter-spacing: -5px;
+  }
+
+  .text-wrapper:hover span {
+    
+    animation: waveAnim 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+  }
+
+  @keyframes waveAnim {
+    0%, 40%, 100% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-6px);
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    text-align: center;
+    overflow: hidden;
+    padding: 1em;
+  }
+
+  li {
+    display: inline;
+  }
+
+  li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.15em;
+    padding: 1em;
+  }
+
+  li a:hover {
+    background-color: rgb(30, 61, 71);
+  }
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
